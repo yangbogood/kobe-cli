@@ -24,7 +24,7 @@ const generateFile = (path, data) => {
         })
     })
 }
-log('请输入要生成的组件名称、如需生成全局组件，请加 global/ 前缀')
+log('请输入要生成的组件名称')
 let componentName = '';
 process.stdin.on('data', async chunk => {
     const inputName = String(chunk).trim().toString();

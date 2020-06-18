@@ -8,35 +8,30 @@ module.exports = {
 </template>
 
 <script>
-
-  import Vue  from 'vue'
-
-  export default {
+export default {
   name:"${name}"
 }
 </script>
 
 <style lang="scss">
-  .${name.toLowerCase()}{
+.${name.toLowerCase()}{
     color:red
-  }
+}
 </style>`
     },
     entryTemplate: name => {
         return `
-const route = [
-  {
+const route = [{
     path: '/${name.toLowerCase()}',
     meta:'${name.toLowerCase()}',
     component:()=>import('./${name}.vue')
-  }
-]
+}]
 export default route;`
     },
     storeTemplate: name => {
         return `
 import Vue from "vue";
-mport Vuex from "vuex";
+import Vuex from "vuex";
     
 Vue.use(Vuex);
     

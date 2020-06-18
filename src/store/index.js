@@ -14,6 +14,6 @@ context.keys().forEach(key => {
 console.info(modules);
 
 export default new Vuex.Store({
-  modules: modules,
+  modules,
   strict: true
 });
